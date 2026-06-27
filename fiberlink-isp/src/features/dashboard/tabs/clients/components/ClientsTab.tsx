@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMagnifyingGlass, HiEye, HiEnvelope, HiXMark, HiCheck, HiPhone, HiClock, HiMapPin, HiUser, HiGlobeAlt } from 'react-icons/hi2'
-import Button from '../../../components/Button/Button'
+import Button from '../../../../../components/Button/Button'
 
 interface Client {
   name: string

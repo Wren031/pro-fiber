@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { HiMagnifyingGlass, HiCheck } from 'react-icons/hi2'
-import Button from '../../../components/Button/Button'
+import Button from '../../../../../components/Button/Button'
 
 const cityCoords: Record<string, [number, number]> = {
   'quezon bukidnon': [7.7323, 125.1022],

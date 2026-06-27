@@ -5,13 +5,13 @@ import {
   HiGlobeAlt, HiArrowRightOnRectangle, HiEnvelope, HiMapPin,
   HiSquares2X2, HiUserGroup, HiCog6Tooth, HiXMark,
 } from 'react-icons/hi2'
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from '../../../context/AuthContext'
 
-const LazyDashboardTab = lazy(() => import('./tabs/DashboardTab'))
-const LazyEmailTab = lazy(() => import('./tabs/EmailTab'))
-const LazyMapTab = lazy(() => import('./tabs/MapTab'))
-const LazyClientsTab = lazy(() => import('./tabs/ClientsTab'))
-const LazySettingsTab = lazy(() => import('./tabs/SettingsTab'))
+const LazyDashboardTab = lazy(() => import('../tabs/overview/components/DashboardTab'))
+const LazyEmailTab = lazy(() => import('../tabs/email/components/EmailTab'))
+const LazyMapTab = lazy(() => import('../tabs/map/components/MapTab'))
+const LazyClientsTab = lazy(() => import('../tabs/clients/components/ClientsTab'))
+const LazySettingsTab = lazy(() => import('../tabs/settings/components/SettingsTab'))
 
 interface Message {
   name: string

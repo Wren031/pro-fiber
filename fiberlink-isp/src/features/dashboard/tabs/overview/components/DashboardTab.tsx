@@ -3,7 +3,7 @@ import {
   HiUserGroup, HiBuildingOffice2, HiCheckBadge, HiRocketLaunch, HiSignal, HiClock,
   HiMapPin,
 } from 'react-icons/hi2'
-import type { UserProfile } from '../../../context/AuthContext'
+import type { UserProfile } from '../../../../../context/AuthContext'
 
 interface Props {
   user: UserProfile

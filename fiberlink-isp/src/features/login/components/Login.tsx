@@ -3,8 +3,8 @@ import { useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { HiGlobeAlt, HiEnvelope, HiLockClosed, HiEye, HiEyeSlash, HiArrowLeft } from 'react-icons/hi2'
 import { BsShieldCheck, BsLightningCharge, BsHeadset } from 'react-icons/bs'
-import { useAuth } from '../../context/AuthContext'
-import Button from '../../components/Button/Button'
+import { useAuth } from '../../../context/AuthContext'
+import Button from '../../../components/Button/Button'
 
 export default function Login() {
   const [email, setEmail] = useState('')

@@ -1,9 +1,9 @@
 import { useState, lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { HiMapPin, HiPhone, HiEnvelope, HiClock } from 'react-icons/hi2'
-import { useAuth } from '../../context/AuthContext'
-import SectionTitle from '../../components/SectionTitle/SectionTitle'
-import Button from '../../components/Button/Button'
+import { useAuth } from '../../../context/AuthContext'
+import SectionTitle from '../../../components/SectionTitle/SectionTitle'
+import Button from '../../../components/Button/Button'
 
 const ContactMapSection = lazy(() => import('./ContactMapSection'))
 

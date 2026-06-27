@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { HiSignal, HiCloudArrowDown } from 'react-icons/hi2'
 import { BsWifi, BsRouter } from 'react-icons/bs'
 import { IoServerOutline } from 'react-icons/io5'
-import Button from '../../components/Button/Button'
+import Button from '../../../components/Button/Button'
 
 const floatingIcons = [
   { icon: BsWifi, className: 'top-20 left-[15%] text-accent/40', size: 40 },

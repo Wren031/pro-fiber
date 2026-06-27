@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { HiCheck, HiGlobeAlt, HiVideoCamera } from 'react-icons/hi2'
 import { BsCashCoin } from 'react-icons/bs'
-import SectionTitle from '../../components/SectionTitle/SectionTitle'
-import Button from '../../components/Button/Button'
+import SectionTitle from '../../../components/SectionTitle/SectionTitle'
+import Button from '../../../components/Button/Button'
 
 type PlanCategory = 'internet' | 'vendo' | 'cctv'
 
@@ -134,6 +134,22 @@ const plans: Plan[] = [
       '6-Month Warranty',
     ],
   },
+    {
+    name: 'Vendo Enterprise',
+    speed: '5 Machines',
+    price: '₱42,000',
+    period: '',
+    popular: false,
+    category: 'vendo',
+    features: [
+      '5 Vendo Machines',
+      'Coin Acceptor Included',
+      'WiFi Router Each',
+      'Full Remote Management',
+      'Real-time Analytics',
+      '6-Month Warranty',
+    ],
+  },
   {
     name: 'CCTV Basic',
     speed: '4 Cameras',
@@ -164,6 +180,22 @@ const plans: Plan[] = [
       'Remote Viewing',
       'Motion Detection',
       '3-Month Warranty',
+    ],
+  },
+    {
+    name: 'CCTV Basic',
+    speed: '4 Cameras',
+    price: '₱5,500',
+    period: '',
+    popular: false,
+    category: 'cctv',
+    features: [
+      '4 HD Cameras',
+      '1TB NVR Recorder',
+      'Night Vision',
+      'Basic Installation',
+      'Mobile Viewing App',
+      '1-Month Warranty',
     ],
   },
   {

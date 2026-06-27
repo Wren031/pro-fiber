@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { BsLightningCharge, BsShieldCheck, BsHeadset, BsMap, BsCashCoin, BsGearWideConnected } from 'react-icons/bs'
-import SectionTitle from '../../components/SectionTitle/SectionTitle'
+import SectionTitle from '../../../components/SectionTitle/SectionTitle'
 
 const reasons = [
   {

@@ -1,7 +1,7 @@
 import { useState, lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { HiMagnifyingGlass, HiCheckCircle, HiClock, HiArrowPath } from 'react-icons/hi2'
-import SectionTitle from '../../components/SectionTitle/SectionTitle'
+import SectionTitle from '../../../components/SectionTitle/SectionTitle'
 
 const CoverageMapSection = lazy(() => import('./CoverageMapSection'))
 

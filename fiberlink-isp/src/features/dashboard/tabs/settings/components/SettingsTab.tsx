@@ -4,8 +4,8 @@ import {
   HiUser, HiEnvelope, HiPhone, HiPhoto, HiGlobeAlt, HiLockClosed,
   HiCheck, HiArrowPath, HiExclamationCircle, HiEye, HiEyeSlash,
 } from 'react-icons/hi2'
-import Button from '../../../components/Button/Button'
-import type { UserProfile } from '../../../context/AuthContext'
+import Button from '../../../../../components/Button/Button'
+import type { UserProfile } from '../../../../../context/AuthContext'
 
 interface Props {
   user: UserProfile

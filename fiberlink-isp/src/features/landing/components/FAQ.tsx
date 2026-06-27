@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiChevronDown } from 'react-icons/hi2'
-import SectionTitle from '../../components/SectionTitle/SectionTitle'
+import SectionTitle from '../../../components/SectionTitle/SectionTitle'
 
 const faqs = [
   {

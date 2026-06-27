@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BsWifi, BsBuilding, BsHouseDoor, BsHddNetwork, BsCashCoin } from 'react-icons/bs'
 import { HiGlobeAlt, HiWrenchScrewdriver, HiVideoCamera, HiDocumentText, HiXMark, HiCheck } from 'react-icons/hi2'
-import SectionTitle from '../../components/SectionTitle/SectionTitle'
+import SectionTitle from '../../../components/SectionTitle/SectionTitle'
 
 interface ServiceDetail {
   icon: React.ComponentType<{ className?: string }>

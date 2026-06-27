@@ -1,7 +1,7 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from '../../../context/AuthContext'
 
 L.Marker.prototype.options.icon = L.divIcon({
   className: '',
@@ -19,33 +19,48 @@ const userPinIcon = L.divIcon({
   popupAnchor: [0, -36],
 })
 
+// ✅ Bukidnon-based coverage
 const cities = [
-  { name: 'Metro Manila', lat: 14.5995, lng: 120.9842, status: 'Available' },
-  { name: 'Cebu City', lat: 10.3157, lng: 123.8854, status: 'Available' },
-  { name: 'Davao City', lat: 7.1907, lng: 125.4553, status: 'Available' },
-  { name: 'Baguio', lat: 16.4023, lng: 120.5960, status: 'Coming Soon' },
-  { name: 'Iloilo City', lat: 10.7202, lng: 122.5621, status: 'Available' },
-  { name: 'Bacolod', lat: 10.6676, lng: 122.9507, status: 'Expanding Area' },
+  { name: 'Malaybalay City', lat: 8.1575, lng: 125.1273, status: 'Available' },
+  { name: 'Valencia City', lat: 7.9069, lng: 125.0944, status: 'Available' },
+  { name: 'Maramag', lat: 7.7625, lng: 125.0056, status: 'Expanding Area' },
+  { name: 'Manolo Fortich', lat: 8.3683, lng: 124.8647, status: 'Available' },
+  { name: 'Quezon, Bukidnon', lat: 7.7300, lng: 125.0980, status: 'Coming Soon' },
 ]
 
 export default function CoverageMapSection() {
   const { user } = useAuth()
   const pinned = user?.pinnedLocation
 
+  // ✅ Bukidnon center
+  const bukidnonCenter = [7.9833, 125.0833]
+
   return (
     <div className="relative rounded-3xl overflow-hidden border border-gray-100">
       <div className="aspect-[21/9] relative z-0">
         <MapContainer
-          center={pinned ? [pinned.lat, pinned.lng] : [12.8797, 121.7740]}
-          zoom={pinned ? 10 : 6}
+          center={pinned ? [pinned.lat, pinned.lng] : bukidnonCenter}
+          zoom={pinned ? 11 : 9}
           scrollWheelZoom={false}
           className="w-full h-full"
           style={{ zIndex: 0 }}
         >
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution='&copy; OpenStreetMap'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+
+          {/* ✅ Coverage circle around Bukidnon */}
+          <Circle
+            center={bukidnonCenter}
+            radius={60000} // 60km coverage radius (adjust if needed)
+            pathOptions={{
+              color: '#2563EB',
+              fillColor: '#60A5FA',
+              fillOpacity: 0.2,
+            }}
+          />
+
           {cities.map((city) => (
             <Marker key={city.name} position={[city.lat, city.lng]}>
               <Popup>
@@ -54,6 +69,7 @@ export default function CoverageMapSection() {
               </Popup>
             </Marker>
           ))}
+
           {pinned && (
             <Marker position={[pinned.lat, pinned.lng]} icon={userPinIcon}>
               <Popup>
@@ -67,8 +83,8 @@ export default function CoverageMapSection() {
         <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent pointer-events-none z-[1]">
           <div className="flex items-center justify-between">
             <div className="text-white">
-              <p className="font-semibold">Metro Manila, Cebu, Davao</p>
-              <p className="text-sm text-gray-300">and 120+ cities nationwide</p>
+              <p className="font-semibold">Bukidnon Coverage Area</p>
+              <p className="text-sm text-gray-300">Valencia • Malaybalay • Maramag & nearby areas</p>
             </div>
           </div>
         </div>
