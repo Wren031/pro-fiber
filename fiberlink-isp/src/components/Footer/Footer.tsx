@@ -17,6 +17,8 @@ const services = [
   { label: 'Home WiFi', href: '#' },
   { label: 'Managed Network', href: '#' },
   { label: 'Static IP', href: '#' },
+  { label: 'CCTV Installation', href: '#' },
+  { label: 'Peso WiFi Vendo', href: '#' },
 ]
 
 const support = [
