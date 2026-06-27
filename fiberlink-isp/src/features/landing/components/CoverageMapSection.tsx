@@ -33,7 +33,7 @@ export default function CoverageMapSection() {
   const pinned = user?.pinnedLocation
 
   // ✅ Bukidnon center
-  const bukidnonCenter = [7.9833, 125.0833]
+  const bukidnonCenter: [number, number] = [7.9833, 125.0833]
 
   return (
     <div className="relative rounded-3xl overflow-hidden border border-gray-100">

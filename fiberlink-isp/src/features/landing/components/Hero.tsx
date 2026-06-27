@@ -95,7 +95,7 @@ export default function Hero() {
 
             <div className="flex items-center gap-8 pt-4">
               {[
-                { label: 'Happy Customers', value: '25K+' },
+                { label: 'Happy Customers', value: '1000K+' },
                 { label: 'Cities Covered', value: '120+' },
                 { label: 'Uptime', value: '99.9%' },
               ].map((stat, i) => (
